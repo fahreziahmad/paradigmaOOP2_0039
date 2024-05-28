@@ -12,13 +12,13 @@ public:
 	}
 };
 
-class pekerja : virtual public orang {
+class pelajar : virtual public orang {
 public:
 
-	pekerja(int pUmur) :
+	pelajar(int pUmur) :
 		orang(pUmur)
 	{
-		cout << "pekerja dibuat\n" << endl;
+		cout << "pelajar dibuat\n" << endl;
 	}
 };
 
@@ -27,9 +27,15 @@ public:
 
 	budi(int pUmur) :
 		pekerja(pUmur),
-		pekerja(pUmur),
+		pelajar(pUmur),
 		orang(pUmur) //hal ini dapat dilakukan jika menggunakan virtual
 	{
 		cout << "Budi dibuat\n" << endl;
 	}
 };
+
+int main() {
+	budi a(12);
+
+	return 0;
+}
